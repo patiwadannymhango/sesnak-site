@@ -5,7 +5,7 @@ import { Reveal, StaggerGroup, StaggerItem } from "../components/Reveal";
 import { Button } from "../components/Button";
 import { PillarIcon, GoodIcon } from "../components/PillarIcon";
 import { pillars, processSteps, goods, site } from "../data/content";
-import { images } from "../data/images";
+import { images, pumpsValvesGallery } from "../data/images";
 import { Check, ArrowUpRight } from "lucide-react";
 
 const pillarImages = [
@@ -54,6 +54,7 @@ export function Services() {
       ))}
 
       <GoodsSection />
+      <PumpsValvesGallerySection />
       <ProcessSection />
     </div>
   );
@@ -188,6 +189,44 @@ function GoodsSection() {
             </a>
           </div>
         </Reveal>
+      </Container>
+    </section>
+  );
+}
+
+function PumpsValvesGallerySection() {
+  return (
+    <section className="bg-white py-24 sm:py-28">
+      <Container>
+        <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
+          <SectionHeading
+            eyebrow="Pumps & Valves"
+            title="A wide range, held in stock"
+            body="Gate, butterfly and check valves; centrifugal and slurry pumps — across the diameters and duties a mine's water, process and dewatering lines actually run."
+          />
+          <a
+            href={`mailto:${site.email}?subject=${encodeURIComponent("Pumps & Valves — Stock Enquiry")}`}
+            className="hidden shrink-0 items-center gap-1.5 text-sm font-semibold text-navy-800 transition-colors hover:text-gold-600 sm:inline-flex"
+          >
+            Ask what's in stock
+            <ArrowUpRight size={15} />
+          </a>
+        </div>
+
+        <StaggerGroup className="mt-12 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {pumpsValvesGallery.map((img, i) => (
+            <StaggerItem key={img.alt} className={i === 0 ? "sm:col-span-2 sm:row-span-2" : ""}>
+              <div className="group relative aspect-square overflow-hidden rounded-xl">
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/60 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+              </div>
+            </StaggerItem>
+          ))}
+        </StaggerGroup>
       </Container>
     </section>
   );
