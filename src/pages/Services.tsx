@@ -15,7 +15,7 @@ const pillarImages = [
   images.transportHaulRoad,
 ];
 
-const goodsImages = [images.wearSolutions, images.pumpsValves, images.hdpePipes];
+const goodsImages = [images.wearSolutions, images.pumpCentrifugalPlant, images.hdpePipes];
 
 export function Services() {
   return (

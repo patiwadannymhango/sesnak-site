@@ -27,10 +27,10 @@ import pumpsValves from "../assets/images/pumps-valves.jpg";
 import wearSolutions from "../assets/images/wear-solutions.jpg";
 import transportHaulRoad from "../assets/images/transport-haul-road.jpg";
 import pumpCentrifugalPlant from "../assets/images/pump-centrifugal-plant.jpg";
+import pumpCentrifugalCloseup from "../assets/images/pump-centrifugal-closeup.jpg";
+import pumpDewateringTrailer from "../assets/images/pump-dewatering-trailer.jpg";
 import valveGateOrangePipe from "../assets/images/valve-gate-orange-pipe.jpg";
 import valveRedwheelWhitePipe from "../assets/images/valve-redwheel-white-pipe.jpg";
-import valveYellowCloseup from "../assets/images/valve-yellow-closeup.jpg";
-import valvePlantInterior from "../assets/images/valve-plant-interior.jpg";
 import valveTechniciansService from "../assets/images/valve-technicians-service.jpg";
 import valveOrangeHandwheel from "../assets/images/valve-orange-handwheel.jpg";
 
@@ -64,23 +64,23 @@ export const images = {
   wearSolutions,
   transportHaulRoad,
   pumpCentrifugalPlant,
+  pumpCentrifugalCloseup,
+  pumpDewateringTrailer,
   valveGateOrangePipe,
   valveRedwheelWhitePipe,
-  valveYellowCloseup,
-  valvePlantInterior,
   valveTechniciansService,
   valveOrangeHandwheel,
 };
 
 export const pumpsValvesGallery = [
-  { src: pumpsValves, alt: "Large industrial gate valve in the supply yard" },
   { src: pumpCentrifugalPlant, alt: "Centrifugal pumps with electric motors at an industrial plant" },
+  { src: pumpDewateringTrailer, alt: "Trailer-mounted diesel dewatering pump unit" },
   { src: valveGateOrangePipe, alt: "Gate valve fitted on process pipework" },
+  { src: pumpCentrifugalCloseup, alt: "Close-up of a centrifugal pump and motor coupling" },
   { src: valveTechniciansService, alt: "Technicians fitting a gate valve" },
   { src: valveRedwheelWhitePipe, alt: "Handwheel valves on a process line" },
-  { src: valvePlantInterior, alt: "Valve and pipe run inside a processing plant" },
+  { src: pumpsValves, alt: "Large industrial gate valve in the supply yard" },
   { src: valveOrangeHandwheel, alt: "Valve handwheel detail on a water line" },
-  { src: valveYellowCloseup, alt: "Shut-off valve detail" },
 ];
 
 export const galleryImages = [
