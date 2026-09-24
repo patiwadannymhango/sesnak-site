@@ -12,7 +12,7 @@ const pillarImages = [
   images.workInstallerDrilling,
   images.workSlidingDoor,
   images.fabricationFlangeDetail,
-  images.heroMineSite,
+  images.transportHaulRoad,
 ];
 
 const goodsImages = [images.wearSolutions, images.pumpsValves, images.hdpePipes];
