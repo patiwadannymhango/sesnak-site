@@ -18,6 +18,13 @@ import siteScaffold1 from "../assets/images/site-scaffold-1.jpg";
 import workScaffoldGlazing from "../assets/images/work-scaffold-glazing.jpg";
 import siteCornerWindow from "../assets/images/site-corner-window.jpg";
 import workSlidingDoor from "../assets/images/work-sliding-door.jpg";
+import aluminiumProfiles from "../assets/images/aluminium-profiles.jpg";
+import fabricationSteelFrame from "../assets/images/fabrication-steel-frame.jpg";
+import fabricationChutes from "../assets/images/fabrication-chutes.jpg";
+import fabricationFlangeDetail from "../assets/images/fabrication-flange-detail.jpg";
+import hdpePipes from "../assets/images/hdpe-pipes.jpg";
+import pumpsValves from "../assets/images/pumps-valves.jpg";
+import wearSolutions from "../assets/images/wear-solutions.jpg";
 
 export const images = {
   logo,
@@ -40,17 +47,28 @@ export const images = {
   workScaffoldGlazing,
   siteCornerWindow,
   workSlidingDoor,
+  aluminiumProfiles,
+  fabricationSteelFrame,
+  fabricationChutes,
+  fabricationFlangeDetail,
+  hdpePipes,
+  pumpsValves,
+  wearSolutions,
 };
 
 export const galleryImages = [
   { src: workInstallerDrilling, alt: "Installer securing an aluminium frame on site" },
+  { src: fabricationFlangeDetail, alt: "Crew fabricating foundation stands for equipment" },
   { src: workGlazingTeam, alt: "Crew fitting glazing to a mine-camp facade" },
+  { src: fabricationSteelFrame, alt: "Structural steel frame erection on site" },
   { src: workTwoCrew, alt: "Two-man crew positioning a structural glass panel" },
-  { src: workFabricationShop, alt: "Fabricated aluminium and glass units in the workshop" },
+  { src: aluminiumProfiles, alt: "Aluminium profile sections used in glazing installation" },
   { src: workWindowFit, alt: "Technicians fitting a window unit in a corridor" },
+  { src: fabricationChutes, alt: "Fabricated chute and hopper units staged on site" },
   { src: workCorridorCrew, alt: "Crew reviewing a glazed corridor installation" },
   { src: workGlassLift, alt: "Crew lifting a glass panel into an upper-floor opening" },
   { src: workGlassMeasure, alt: "Artisans measuring glass before cutting" },
+  { src: workFabricationShop, alt: "Fabricated aluminium and glass units in the workshop" },
   { src: workOfficeFitout, alt: "Office fit-out with glass partitioning near completion" },
   { src: siteBuildingRed, alt: "Completed building elevation with window installation" },
   { src: siteScaffold1, alt: "Scaffolded building under construction" },

@@ -46,8 +46,9 @@ function WhoWeAre() {
                   centre of North-Western Province. The registered operating address is Solwezi
                   Lodge, Room 2. The company specialises in the hiring of labour to the mines and
                   to mine-support contractors — a core business strengthened by three technical
-                  pillars in which we have built a practical reputation: boiler making, automotive
-                  mechanics, and transport logistics.
+                  pillars in which we have built a practical reputation: aluminium installations,
+                  fabrication, and transport — and by a growing line of goods supply for the
+                  parts a site consumes.
                 </p>
               </Reveal>
               <Reveal delay={0.1}>
@@ -61,12 +62,12 @@ function WhoWeAre() {
               </Reveal>
               <Reveal delay={0.18}>
                 <p>
-                  These four lines — labour hire, boiler making, automotive mechanics and
-                  transport logistics — are not four separate companies. They are one
-                  organisation. A fitter hired to a plant may need a fabricated part from our
-                  workshop. A crew going on shift may need a serviced vehicle and a driver who
-                  knows the route. The value of SESNAK LIMITED is that these needs are
-                  coordinated from one management table.
+                  These four lines — labour hire, aluminium installations, fabrication and
+                  transport — are not four separate companies. They are one organisation, backed
+                  by a supply line of wear parts, pumps, valves and HDPE pipe. A fitter hired to a
+                  plant may need a fabricated part from our workshop. A site office may need a
+                  window fitted before the crew moves in. The value of SESNAK LIMITED is that
+                  these needs are coordinated from one management table.
                 </p>
               </Reveal>
             </div>

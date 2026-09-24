@@ -13,8 +13,8 @@ import { SectionHeading } from "../components/SectionHeading";
 import { Reveal, StaggerGroup, StaggerItem } from "../components/Reveal";
 import { Button } from "../components/Button";
 import { CountUp } from "../components/CountUp";
-import { PillarIcon } from "../components/PillarIcon";
-import { pillars, site, values, leadership } from "../data/content";
+import { PillarIcon, GoodIcon } from "../components/PillarIcon";
+import { pillars, site, values, leadership, goods } from "../data/content";
 import { images, galleryImages } from "../data/images";
 import { Link } from "react-router-dom";
 
@@ -26,6 +26,7 @@ export function Home() {
       <Hero />
       <TrustStrip />
       <PillarsSection />
+      <GoodsTeaser />
       <AboutTeaser />
       <ValuesSection />
       <LeadershipTeaser />
@@ -80,8 +81,9 @@ function Hero() {
             className="mt-6 max-w-xl text-lg leading-relaxed text-white/75"
           >
             SESNAK LIMITED supplies skilled, safety-disciplined workers to Solwezi's mines and
-            support contractors — backed by our own boiler shop, automotive workshop and
-            controlled transport fleet, so the labour promise is never left half-kept.
+            support contractors — backed by our own aluminium and fabrication workshops,
+            controlled transport, and a supply line of mining consumables, so the labour promise
+            is never left half-kept.
           </motion.p>
 
           <motion.div
@@ -162,7 +164,7 @@ function PillarsSection() {
         <SectionHeading
           eyebrow="What We Do"
           title="One organisation, four coordinated trades"
-          body="A fitter hired to a plant may need a fabricated part from our workshop. A crew going on shift may need a serviced vehicle and a driver who knows the route. SESNAK LIMITED coordinates it all from one management table."
+          body="A fitter hired to a plant may need a fabricated part from our workshop. A site office may need a window fitted before the crew moves in. SESNAK LIMITED coordinates it all from one management table."
         />
 
         <StaggerGroup className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -183,6 +185,47 @@ function PillarsSection() {
                     &rarr;
                   </span>
                 </span>
+              </Link>
+            </StaggerItem>
+          ))}
+        </StaggerGroup>
+      </Container>
+    </section>
+  );
+}
+
+function GoodsTeaser() {
+  return (
+    <section className="bg-white py-24 sm:py-28">
+      <Container>
+        <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
+          <SectionHeading
+            eyebrow="Goods We Supply"
+            title="Consumables, alongside the crew"
+            body="Wear liners, pumps and valves, and HDPE pipe — sourced, stocked and delivered so a site doesn't stall waiting on a part."
+          />
+          <Link
+            to="/services#goods"
+            className="hidden shrink-0 items-center gap-1.5 text-sm font-semibold text-navy-800 transition-colors hover:text-gold-600 sm:inline-flex"
+          >
+            View all goods
+            <span className="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+          </Link>
+        </div>
+
+        <StaggerGroup className="mt-12 grid gap-6 sm:grid-cols-3">
+          {goods.map((good) => (
+            <StaggerItem key={good.id}>
+              <Link
+                to={`/services#${good.id}`}
+                className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-slate-50 p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-navy-900/20 hover:shadow-xl hover:shadow-navy-900/5"
+              >
+                <div className="grid h-12 w-12 place-items-center rounded-xl bg-navy-900 text-white transition-colors duration-300 group-hover:bg-gold-500 group-hover:text-navy-950">
+                  <GoodIcon icon={good.icon} size={22} />
+                </div>
+                <h3 className="mt-5 font-display text-lg font-bold text-navy-900">{good.title}</h3>
+                <p className="text-xs font-medium uppercase tracking-wide text-slate-400">{good.subtitle}</p>
+                <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">{good.summary}</p>
               </Link>
             </StaggerItem>
           ))}

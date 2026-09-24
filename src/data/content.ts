@@ -2,9 +2,9 @@ export const site = {
   name: "SESNAK LIMITED",
   shortName: "Sesnak",
   tagline: "Labour Hire for the Mining Industry",
-  pillars: ["Labour Hire", "Boiler Making", "Automotive Mechanics", "Transport Logistics"],
+  pillars: ["Labour Hire", "Aluminium Installations", "Fabrication", "Transport"],
   descriptor:
-    "A Solwezi-based labour and technical services company supplying skilled workers, fabrication, vehicle repair, and controlled transport to North-Western Province's mining industry.",
+    "A Solwezi-based labour, fabrication and supply company serving North-Western Province's mining industry — skilled workers, aluminium installations, structural fabrication and controlled transport, backed by a supply line of wear parts, pumps, valves and HDPE pipe.",
   email: "sesnakltd@gmail.com",
   phones: ["+260 966 400 390", "+260 977 705 100"],
   address: {
@@ -35,7 +35,7 @@ export type Pillar = {
   title: string;
   short: string;
   summary: string;
-  icon: "users" | "flame" | "wrench" | "truck";
+  icon: "users" | "flame" | "frame" | "truck";
   points: string[];
   detail: string[];
 };
@@ -50,7 +50,7 @@ export const pillars: Pillar[] = [
       "The principal business of SESNAK LIMITED. We supply artisans, operators, drivers, general workers, and specialised trades to mines and mine-support contractors across North-Western Province, matched precisely to the trade ticket a client requisitions.",
     points: [
       "General workers, semi-skilled assistants, and coded tradespeople",
-      "Welders, boiler makers, and automotive & plant mechanics",
+      "Welders, boilermakers, fabricators, and plant mechanics",
       "Drivers and machine operators to the client's specified class",
       "Administrative and stores support where a contract requires it",
     ],
@@ -61,41 +61,41 @@ export const pillars: Pillar[] = [
     ],
   },
   {
-    id: "boiler-making",
-    title: "Boiler Making",
-    short: "Fabrication and plate work that holds under real conditions.",
-    icon: "flame",
+    id: "aluminium-installations",
+    title: "Aluminium Installations",
+    short: "Windows, doors and shopfronts, fitted to a checked tolerance.",
+    icon: "frame",
     summary:
-      "Mines and contractors do not only need hands — they need metal that has been cut, rolled, welded and fitted correctly. Boiler making is a core competence, not a sideline, backing our labour hire with genuine workshop skill.",
+      "From site offices to mine-camp buildings, our glazing crews cut, fit and finish aluminium windows, doors, sliding systems and shopfronts — the same site discipline we bring to a labour placement, applied to a trade with its own tolerances.",
     points: [
-      "Plate marking, cutting, rolling and forming",
-      "Welding of structural and plate assemblies",
-      "Chutes, hoppers, guards, frames, brackets and platforms",
-      "Shutdown-ready replacement sections and rapid site support",
+      "Aluminium windows, doors and sliding systems",
+      "Shopfront and curtain-wall glazing",
+      "Office and site-building fit-outs",
+      "Survey, cut, fit and seal to a checked tolerance",
     ],
     detail: [
-      "Every job is judged by fit, strength, neatness of weld, and the safety of the finished item. A guard that does not guard, or a platform that flexes under a person, is not workmanship — it is a future incident.",
-      "Boiler making depends on coded or competent welders, platers who can read a mark, and helpers who understand heat, clamp and grind. Work is managed on a job card with a material list, an inspection of the finished item, and a delivery note — the paperwork discipline that keeps tools accounted for and invoices undisputed.",
-      "Our standard is simple to say and hard to fake: measure twice, cut once, weld to the procedure, inspect before release, and never send a piece the maker would refuse to stand under.",
+      "A window frame that is out of square, or a seal that lets in the Solwezi rains, is not a finished job — it is a callback. Our crews work from a harness where height demands it, and from the same pre-task discipline that governs every other placement, because a glazing job is still a job on a live site.",
+      "The sequence is fixed: survey the opening, cut the aluminium profile to size, dry-fit before sealing, glaze, seal, and inspect. Off-cuts and hardware are accounted for on a job card, the same way a boiler-shop job is — a fitted door is not finished until someone has checked that it opens, closes and locks without forcing it.",
+      "We fit for offices, workshops, camp accommodation and civic buildings alike. The standard does not change with the size of the job: square frames, glass seated without stress, and a weatherproof seal the first time.",
     ],
   },
   {
-    id: "automotive-mechanics",
-    title: "Automotive Mechanics",
-    short: "Vehicles that start, steer, stop, and carry a load safely.",
-    icon: "wrench",
+    id: "fabrication",
+    title: "Fabrication",
+    short: "Structural steel and plate work that holds under real conditions.",
+    icon: "flame",
     summary:
-      "Labour that cannot reach the gate is not labour. Materials that sit in town because a truck is down are not logistics. Our automotive section keeps light and commercial vehicles fit for the road and fit for the mine.",
+      "Mines and contractors do not only need hands — they need metal that has been measured, cut, welded and erected correctly, from a structural steel portal frame to a fabricated chute or guard. Fabrication is a core competence, not a sideline, backing our labour hire with genuine workshop and site skill.",
     points: [
-      "Scheduled service and diagnosis of running faults",
-      "Brake, steering and safety-critical repairs",
-      "Electrical fault-finding and worn service-item replacement",
-      "Pre-despatch inspection before any vehicle is released to a driver",
+      "Structural steelwork — portal frames, purlins and platforms",
+      "Plate marking, cutting, rolling and welding",
+      "Chutes, hoppers, guards, brackets and equipment stands",
+      "Foundation formwork and shutdown-ready site fabrication",
     ],
     detail: [
-      "A vehicle with defective brakes, dangerous steering, bald tyres on a mine road, failed lights at night, or a load restraint that cannot hold, will not be released — a rule that is not negotiable by a driver in a hurry or a client who wants it 'just for today'. The mechanic who signs a release is signing for other people's lives, and that decision is backed the whole way up the chain.",
-      "We do not pretend to be a full original-equipment dealer for every brand on the road. We commit to honest diagnosis, safe release standards, and a clear report when a job is beyond the section and must go to a specialist.",
-      "Every service and safety-critical repair is recorded against the vehicle — job cards, parts used, and the artisan's name — not left to memory that disappears when a supervisor changes.",
+      "Every job is judged by fit, strength, neatness of weld, and the safety of the finished item — whether it is a guard on a chute or a column carrying a roof. A platform that flexes under a person, or a frame that is out of plumb, is not workmanship. It is a future incident.",
+      "Fabrication depends on coded or competent welders, platers who can read a mark, and helpers who understand heat, clamp and grind — the same crew that pours a foundation, sets the formwork and erects the steel above it. Work is managed on a job card with a material list, an inspection of the finished item, and a delivery note — the paperwork discipline that keeps tools accounted for and invoices undisputed.",
+      "Our standard is simple to say and hard to fake: measure twice, cut once, weld to the procedure, inspect before release, and never send a piece the maker would refuse to stand under.",
     ],
   },
   {
@@ -195,7 +195,7 @@ export const leadership: Array<{
     duties: [
       "Command of the operating day — deployments, rosters, job cards and dispatch",
       "Supervision of hired labour and first response to client performance complaints",
-      "Workshop control across boiler making and automotive — quality of release, priority calls",
+      "Workshop control across fabrication and aluminium installations — quality of release, priority calls",
       "Transport and dispatch — no vehicle moves without control",
       "Standing safety stop-authority to halt unsafe work or take a vehicle off the road",
       "Honest performance reporting to the CEO, including bad news brought early",
@@ -228,7 +228,7 @@ export const audiences = [
   },
   {
     title: "Engineering & Maintenance Contractors",
-    body: "Boiler makers, welders, mechanics and general workers aligned to site standards.",
+    body: "Fabricators, welders, aluminium glaziers and general workers aligned to site standards.",
   },
   {
     title: "Transport & Site-Support Operations",
@@ -236,7 +236,7 @@ export const audiences = [
   },
   {
     title: "Local Businesses & Civic Users",
-    body: "Fabrication, vehicle repair, or organised movement of goods and people within the district.",
+    body: "Fabrication, aluminium installations, or organised movement of goods and people within the district.",
   },
 ];
 
@@ -325,7 +325,61 @@ export const orgChain = [
 
 export const operatingUnits = [
   "Labour hire crews",
-  "Boiler workshop",
-  "Automotive section",
+  "Fabrication workshop",
+  "Aluminium installations",
   "Transport dispatch",
+];
+
+export type Good = {
+  id: string;
+  title: string;
+  subtitle: string;
+  summary: string;
+  icon: "shield" | "droplets" | "cylinder";
+  specs: string[];
+};
+
+export const goods: Good[] = [
+  {
+    id: "wear-solutions",
+    title: "Wear Solutions",
+    subtitle: "Chocky blocks & ceramic tile linings",
+    summary:
+      "Abrasion-resistant lining systems for chutes, hoppers, bins and transfer points — supplied and fitted to extend the working life of plant that takes a daily beating from ore, rock and slurry.",
+    icon: "shield",
+    specs: [
+      "Chocky blocks (chrome carbide overlay)",
+      "Ceramic tile wear linings",
+      "Chute, hopper and bin lining",
+      "Supply, cut-to-size and site fitting",
+    ],
+  },
+  {
+    id: "pumps-valves",
+    title: "Pumps & Valves",
+    subtitle: "Process, water and slurry duty",
+    summary:
+      "Industrial pumps and valves for water reticulation, dewatering and process lines — supplied with the parts and technical backup to keep a site's fluid systems running.",
+    icon: "droplets",
+    specs: [
+      "Gate, butterfly and check valves",
+      "Centrifugal and slurry pumps",
+      "Seals, spares and wear parts",
+      "Delivery across North-Western Province",
+    ],
+  },
+  {
+    id: "hdpe-pipes",
+    title: "HDPE Pipes & Fittings",
+    subtitle: "Water, tailings & process lines",
+    summary:
+      "High-density polyethylene pipe and fittings for reticulation, dewatering and tailings lines — supplied in the diameters and pressure classes a site's engineering drawings call for.",
+    icon: "cylinder",
+    specs: [
+      "HDPE pipe, multiple diameters and PN ratings",
+      "Fittings, flanges and reducers",
+      "Bulk and site-direct supply",
+      "Stock held for fast turnaround",
+    ],
+  },
 ];

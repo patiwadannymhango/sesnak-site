@@ -3,17 +3,19 @@ import { PageHero } from "../components/PageHero";
 import { SectionHeading } from "../components/SectionHeading";
 import { Reveal, StaggerGroup, StaggerItem } from "../components/Reveal";
 import { Button } from "../components/Button";
-import { PillarIcon } from "../components/PillarIcon";
-import { pillars, processSteps } from "../data/content";
+import { PillarIcon, GoodIcon } from "../components/PillarIcon";
+import { pillars, processSteps, goods, site } from "../data/content";
 import { images } from "../data/images";
-import { Check } from "lucide-react";
+import { Check, ArrowUpRight } from "lucide-react";
 
 const pillarImages = [
   images.workInstallerDrilling,
-  images.workFabricationShop,
   images.workSlidingDoor,
-  images.workCorridorCrew,
+  images.fabricationFlangeDetail,
+  images.heroMineSite,
 ];
+
+const goodsImages = [images.wearSolutions, images.pumpsValves, images.hdpePipes];
 
 export function Services() {
   return (
@@ -21,7 +23,7 @@ export function Services() {
       <PageHero
         eyebrow="Services"
         title="Four trades, coordinated as one promise"
-        body="Labour hire is the heart of the business. Boiler making, automotive mechanics and transport logistics exist so that the labour promise is never left half-kept."
+        body="Labour hire is the heart of the business. Aluminium installations, fabrication and transport exist so that the labour promise is never left half-kept — backed by a supply line of the goods a site actually consumes."
         image={images.workGlazingTeam}
       />
 
@@ -37,6 +39,12 @@ export function Services() {
                 {p.title}
               </a>
             ))}
+            <a
+              href="#goods"
+              className="rounded-full border border-gold-500/40 bg-gold-500/10 px-5 py-2 text-sm font-semibold text-gold-700 transition-colors hover:border-gold-500 hover:bg-gold-500 hover:text-navy-950"
+            >
+              Goods We Supply
+            </a>
           </div>
         </Container>
       </section>
@@ -45,6 +53,7 @@ export function Services() {
         <PillarSection key={pillar.id} pillar={pillar} image={pillarImages[index]} reversed={index % 2 === 1} />
       ))}
 
+      <GoodsSection />
       <ProcessSection />
     </div>
   );
@@ -110,6 +119,75 @@ function PillarSection({
             </Reveal>
           </div>
         </div>
+      </Container>
+    </section>
+  );
+}
+
+function GoodsSection() {
+  return (
+    <section id="goods" className="scroll-mt-24 bg-slate-50 py-24 sm:py-28">
+      <Container>
+        <SectionHeading
+          eyebrow="Goods We Supply"
+          title="The consumables a mine site actually runs out of"
+          body="Alongside labour and workshop capability, SESNAK LIMITED supplies the wear parts, fluid-control equipment and pipe that keep plant and reticulation running — sourced, stocked and delivered to site."
+        />
+
+        <StaggerGroup className="mt-14 grid gap-6 lg:grid-cols-3">
+          {goods.map((good, index) => (
+            <StaggerItem key={good.id}>
+              <div
+                id={good.id}
+                className="group flex h-full scroll-mt-24 flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-navy-900/5"
+              >
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img
+                    src={goodsImages[index]}
+                    alt={good.title}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-navy-950/10 to-transparent" />
+                  <div className="absolute left-5 top-5 grid h-12 w-12 place-items-center rounded-xl bg-navy-950/90 text-gold-400 backdrop-blur-sm">
+                    <GoodIcon icon={good.icon} size={22} />
+                  </div>
+                  <div className="absolute bottom-4 left-5 right-5 text-white">
+                    <h3 className="font-display text-lg font-bold">{good.title}</h3>
+                    <p className="text-xs uppercase tracking-wide text-white/70">{good.subtitle}</p>
+                  </div>
+                </div>
+                <div className="flex flex-1 flex-col p-7">
+                  <p className="text-sm leading-relaxed text-slate-600">{good.summary}</p>
+                  <ul className="mt-5 space-y-2.5">
+                    {good.specs.map((spec) => (
+                      <li key={spec} className="flex items-start gap-2.5 text-sm text-slate-700">
+                        <Check size={15} className="mt-0.5 shrink-0 text-gold-600" />
+                        <span>{spec}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </StaggerItem>
+          ))}
+        </StaggerGroup>
+
+        <Reveal delay={0.2}>
+          <div className="mt-10 flex flex-col items-center justify-center gap-3 rounded-2xl border border-slate-200 bg-white p-6 text-center sm:flex-row sm:text-left">
+            <p className="text-sm text-slate-600">
+              Need a quote, a spec sheet, or stock availability for a specific size or pressure class?
+            </p>
+            <a
+              href={`mailto:${site.email}?subject=${encodeURIComponent(
+                "Goods Enquiry — Wear Solutions / Pumps & Valves / HDPE Pipe"
+              )}`}
+              className="inline-flex shrink-0 items-center gap-1.5 text-sm font-semibold text-navy-800 hover:text-gold-600"
+            >
+              Email a goods enquiry
+              <ArrowUpRight size={15} />
+            </a>
+          </div>
+        </Reveal>
       </Container>
     </section>
   );
