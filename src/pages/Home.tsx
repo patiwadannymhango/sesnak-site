@@ -71,7 +71,7 @@ function Hero() {
             transition={{ duration: 0.8, delay: 0.22, ease: [0.16, 1, 0.3, 1] }}
             className="mt-6 text-4xl font-bold leading-[1.08] text-white text-balance sm:text-5xl lg:text-6xl"
           >
-            Labour Hire for the Mining Industry — Built to Be Dependable.
+            Labour, Fabrication &amp; Supply for the Mining Industry — Built to Be Dependable.
           </motion.h1>
 
           <motion.p

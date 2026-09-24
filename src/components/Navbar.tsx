@@ -53,23 +53,24 @@ export function Navbar() {
               {site.name}
             </span>
             <span
-              className={`text-[10px] uppercase tracking-[0.18em] transition-colors ${
+              className={`max-w-[180px] truncate text-[10px] uppercase tracking-[0.14em] transition-colors ${
                 scrolled ? "text-slate-500" : "text-white/70"
               }`}
+              title={site.tagline}
             >
               {site.tagline}
             </span>
           </span>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-0.5 shrink-0">
           {nav.map((item) => (
             <NavLink
               key={item.to}
               to={item.to}
               end={item.to === "/"}
               className={({ isActive }) =>
-                `relative rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                `relative whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium transition-colors ${
                   isActive
                     ? scrolled
                       ? "text-navy-900"
@@ -98,10 +99,10 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden lg:flex items-center gap-4">
+        <div className="hidden lg:flex items-center gap-4 shrink-0">
           <a
             href={`tel:${site.phones[0].replace(/\s/g, "")}`}
-            className={`flex items-center gap-2 text-sm font-semibold transition-colors ${
+            className={`flex items-center gap-2 whitespace-nowrap text-sm font-semibold transition-colors ${
               scrolled ? "text-navy-900" : "text-white"
             }`}
           >
@@ -110,7 +111,7 @@ export function Navbar() {
           </a>
           <Link
             to="/contact"
-            className="rounded-full bg-navy-900 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-navy-800 hover:-translate-y-0.5"
+            className="whitespace-nowrap rounded-full bg-navy-900 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-navy-800 hover:-translate-y-0.5"
           >
             Request Labour
           </Link>

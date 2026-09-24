@@ -1,7 +1,7 @@
 export const site = {
   name: "SESNAK LIMITED",
   shortName: "Sesnak",
-  tagline: "Labour Hire for the Mining Industry",
+  tagline: "Labour, Fabrication & Supply for the Mining Industry",
   pillars: ["Labour Hire", "Aluminium Installations", "Fabrication", "Transport"],
   descriptor:
     "A Solwezi-based labour, fabrication and supply company serving North-Western Province's mining industry — skilled workers, aluminium installations, structural fabrication and controlled transport, backed by a supply line of wear parts, pumps, valves and HDPE pipe.",
