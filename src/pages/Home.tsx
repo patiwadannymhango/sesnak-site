@@ -194,6 +194,8 @@ function PillarsSection() {
   );
 }
 
+const goodsTeaserImages = [images.wearSolutions, images.pumpCentrifugalPlant, images.hdpePipes];
+
 function GoodsTeaser() {
   return (
     <section className="bg-white py-24 sm:py-28">
@@ -214,18 +216,28 @@ function GoodsTeaser() {
         </div>
 
         <StaggerGroup className="mt-12 grid gap-6 sm:grid-cols-3">
-          {goods.map((good) => (
+          {goods.map((good, index) => (
             <StaggerItem key={good.id}>
               <Link
                 to={`/services#${good.id}`}
-                className="group flex h-full flex-col rounded-2xl border border-slate-200 bg-slate-50 p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-navy-900/20 hover:shadow-xl hover:shadow-navy-900/5"
+                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 transition-all duration-300 hover:-translate-y-1.5 hover:border-navy-900/20 hover:shadow-xl hover:shadow-navy-900/5"
               >
-                <div className="grid h-12 w-12 place-items-center rounded-xl bg-navy-900 text-white transition-colors duration-300 group-hover:bg-gold-500 group-hover:text-navy-950">
-                  <GoodIcon icon={good.icon} size={22} />
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <img
+                    src={goodsTeaserImages[index]}
+                    alt={good.title}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-navy-950/10 to-transparent" />
+                  <div className="absolute left-4 top-4 grid h-11 w-11 place-items-center rounded-xl bg-navy-950/90 text-gold-400 backdrop-blur-sm transition-colors group-hover:bg-gold-500 group-hover:text-navy-950">
+                    <GoodIcon icon={good.icon} size={20} />
+                  </div>
                 </div>
-                <h3 className="mt-5 font-display text-lg font-bold text-navy-900">{good.title}</h3>
-                <p className="text-xs font-medium uppercase tracking-wide text-slate-400">{good.subtitle}</p>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">{good.summary}</p>
+                <div className="flex flex-1 flex-col p-7">
+                  <h3 className="font-display text-lg font-bold text-navy-900">{good.title}</h3>
+                  <p className="text-xs font-medium uppercase tracking-wide text-slate-400">{good.subtitle}</p>
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">{good.summary}</p>
+                </div>
               </Link>
             </StaggerItem>
           ))}
