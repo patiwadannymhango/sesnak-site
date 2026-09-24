@@ -46,13 +46,13 @@ function Hero() {
         className="absolute inset-0"
       >
         <img
-          src={images.heroQuarrySunset}
-          alt="Aerial view of a quarry and processing plant at golden hour"
+          src={images.heroMineSite}
+          alt="Aerial view of mine site earthworks and plant"
           className="h-full w-full object-cover"
         />
       </motion.div>
-      <div className="absolute inset-0 bg-gradient-to-b from-navy-950/55 via-transparent to-navy-950/90" />
-      <div className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/55 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-navy-950/90 via-navy-950/80 to-navy-950" />
+      <div className="absolute inset-0 bg-gradient-to-r from-navy-950 via-navy-950/40 to-transparent" />
 
       <Container className="relative pt-28 pb-20">
         <div className="max-w-3xl">

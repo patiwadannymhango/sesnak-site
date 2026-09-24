@@ -26,7 +26,6 @@ import hdpePipes from "../assets/images/hdpe-pipes.jpg";
 import pumpsValves from "../assets/images/pumps-valves.jpg";
 import wearSolutions from "../assets/images/wear-solutions.jpg";
 import transportHaulRoad from "../assets/images/transport-haul-road.jpg";
-import heroQuarrySunset from "../assets/images/hero-quarry-sunset.jpg";
 
 export const images = {
   logo,
@@ -57,7 +56,6 @@ export const images = {
   pumpsValves,
   wearSolutions,
   transportHaulRoad,
-  heroQuarrySunset,
 };
 
 export const galleryImages = [
